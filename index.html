@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question Themes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Quiz</h1>
+            <h3>Select a theme</h3>
+        </header>
+
+	<dev class="themes">
+	<button id="theme1" class="theme-button">Theme 1</button>
+	<button id="theme2" class="theme-button">Theme 2</button>
+	<button id="theme3" class="theme-button">Theme 3</button>
+	<button id="theme4" class="theme-button">Theme 4</button>
+	<button id="theme5" class="theme-button">Theme 5</button>
+    </dev>
+    
+    <button id="reset" class="backbutton">Reset Score</button>
+
+
+	<script>
+		const theme1Btn = document.getElementById("theme1");
+		const theme2Btn = document.getElementById("theme2");
+		const theme3Btn = document.getElementById("theme3");
+		const theme4Btn = document.getElementById("theme4");
+		const theme5Btn = document.getElementById("theme5");
+        const ResetBtn = document.getElementById("reset");
+
+        ResetBtn.addEventListener("click", function()
+        {
+            localStorage.setItem("score", 0);
+        })
+
+		theme1Btn.addEventListener("click", function() {
+			window.location.href = "question.html?theme=1";
+		});
+
+		theme2Btn.addEventListener("click", function() {
+			window.location.href = "question.html?theme=2";
+		});
+
+		theme3Btn.addEventListener("click", function() {
+			window.location.href = "question.html?theme=3";
+		});
+
+		theme4Btn.addEventListener("click", function() {
+			window.location.href = "question.html?theme=4";
+		});
+
+		theme5Btn.addEventListener("click", function() {
+			window.location.href = "question.html?theme=5";
+		});
+	</script>
+    </main>
+</body>
+</html>
